@@ -29,40 +29,70 @@ print("------------------------------------------------")
 
 
 
-class Person:
-    company = "clarusway"
+# class Person:
+#     company = "clarusway"
     
     
-    def test(self):
-        print("test")
+#     def test(self):
+#         print("test")
         
     
-    def set_details(self, name, age):
-        self.name = name
-        self.age = age
+#     def set_details(self, name, age):
+#         self.name = name
+#         self.age = age
         
-    def get_details(self):
-        print(self.name, self.age)
+#     def get_details(self):
+#         print(self.name, self.age)
         
-    @staticmethod
-    def salute():
-        print("hı there!")
+#     @staticmethod
+#     def salute():
+#         print("hı there!")
         
         
-person1 = Person()
-person2 = Person()
+# person1 = Person()
+# person2 = Person()
     
 # person1.test()
 # Person.test()
 
-person1.set_details("barry", 20)
+# person1.set_details("barry", 20)
 
-person1.get_details()
+# person1.get_details()
 
-print(person1.name) 
+# print(person1.name) 
 
-person1.salute()
+# person1.salute()
 # Person.test(person1)  python arkada bu şekle dönüştürüyor ve o yüzden üstteki çalışmıyor.(arguman gönderdin diyor) def tanımlamasına self ekleyerek sorunu çözebiliriz.
+
+
+
+
+#! special methods (init, str)
+
+class Person:
+    company = "clarusway"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def get_details(self):
+        print(self.name, self.age)
+
+    def __str__(self):    #  print(person1) yaparsak ve str yoksa bize adresini ve nereden türedildiğini döndürür ama str varsa buradakileri döndürür. arka planda print(person1.__str__) çalışıyor.
+        return f"{self.name} - {self.age}"
+
+person1 = Person("victor", 32)   # init methodu sayesinde arguman gönderip direk oluşturabiliriz.
+# person1.get_details()
+
+person2 = Person("selcuk", 22)
+# person2.get_details()
+
+print(person1)
+
+
+
+
 
 
 print("------------------------------------------------")

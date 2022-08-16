@@ -10,20 +10,20 @@ print("------------------------------------------------")
 # print_types(test)   
 
 
-class Person:
-    name = "Victor"
-    age = 32
+# class Person:
+#     name = "Victor"
+#     age = 32
 
-person1 = Person()
-person2 = Person()
+# person1 = Person()
+# person2 = Person()
 
 # person1.location = "Turkey"
 #! Instance'larda yaptığımız değişiklikler diğer instance'ları etkilemez 👇
 # print(person2.location) #* 'Person' object has no attribute 'location'
 
-person2.age = 25
-print(person1.age) # 32
-print(person2.age) # 25
+# person2.age = 25
+# print(person1.age) # 32
+# print(person2.age) # 25
 
 #? İlk önce instance'a bakıyor. Orada yoksa class'a gidip bakıyor 👆
 

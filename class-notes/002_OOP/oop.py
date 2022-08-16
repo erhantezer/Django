@@ -69,6 +69,29 @@ print("------------------------------------------------")
 
 #! special methods (init, str)
 
+# class Person:
+#     company = "clarusway"
+
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def get_details(self):
+#         print(self.name, self.age)
+
+#     def __str__(self):    #  print(person1) yaparsak ve str yoksa bize adresini ve nereden türedildiğini döndürür ama str varsa buradakileri döndürür. arka planda print(person1.__str__) çalışıyor.
+        # return f"{self.name} - {self.age}"
+
+# person1 = Person("victor", 32)   # init methodu sayesinde arguman gönderip direk oluşturabiliriz.
+# person1.get_details()
+
+# person2 = Person("selcuk", 22)
+# person2.get_details()
+
+# print(person1)
+
+
+
 class Person:
     company = "clarusway"
 
@@ -76,19 +99,31 @@ class Person:
         self.name = name
         self.age = age
 
+    def __str__(self):
+        return f"{self.name} - {self.age}"
+
     def get_details(self):
         print(self.name, self.age)
 
-    def __str__(self):    #  print(person1) yaparsak ve str yoksa bize adresini ve nereden türedildiğini döndürür ama str varsa buradakileri döndürür. arka planda print(person1.__str__) çalışıyor.
-        return f"{self.name} - {self.age}"
+class Employee(Person):
+    def __init__(self, name, age, path):
+        # self.name = name
+        # self.age = age
 
-person1 = Person("victor", 32)   # init methodu sayesinde arguman gönderip direk oluşturabiliriz.
-# person1.get_details()
+        #! parent'taki attribute'ları super() metoduyla alabiliyoruz👇
 
-person2 = Person("selcuk", 22)
-# person2.get_details()
+        super().__init__(name, age)
+        self.path = path
 
-print(person1)
+    #? Parent'taki metodu ihtiyacımız doğrultusunda overwrite ederek tekrardan tanımlamış olduk 👇
+    def get_details(self):
+        print(self.name, self.age, self.path)
+
+emp1 = Employee("Victor", 32, "FS")
+
+print(emp1) # Victor - 32
+
+emp1.get_details() # Victor 32 FS
 
 
 

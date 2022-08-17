@@ -174,6 +174,7 @@ emp1.get_details()  # Person class'ın daki method'ların ve atribute'ların hep
 emp1.display_langs()   # Lang classından miras aldı...
 
 
+
 #? inner class
 
 # from django.db import models

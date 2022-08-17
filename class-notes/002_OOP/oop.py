@@ -192,6 +192,9 @@ emp1.display_langs()   # Lang classından miras aldı...
 # print(help(Employee))   # Output : class'ın herşeyini veriyor.
 
 
+
+
+
 print("--------------------------------------")
 
 

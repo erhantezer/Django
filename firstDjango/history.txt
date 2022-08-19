@@ -1,0 +1,500 @@
+   18  git status
+   19  git add .
+   20  git commit -m "herşey tamam"
+   21  git remote add gitrepo https://github.com/erhantezer/git-dersleri.git
+   22  git push -u gitrepo master
+   23  cd Desktop
+   24  cd Desktop
+   25  mkdir second-repo
+   26  nano README.md
+   27  git add .
+   28  git commit -m "first commit"
+   29  git init
+   30  git add .
+   31  cd second-repo
+   32  git init
+   33  nano README.md
+   34  git branch
+   35  git remote add repome https://github.com/erhantezer/second-repo.git
+   36  git push -u repome master
+   37  git add .
+   38  git commit -m "ilk proje"
+   39  git remote add repome https://github.com/erhantezer/second-repo.git
+   40  git push -u repome master
+   41  cd ..
+   42  rm -rf .git
+   43  cd second-repo
+   44  cd ..
+   45  git clone https://github.com/erhantezer/third-repo.git
+   46  ll
+   47  cd third-repo
+   48  nano index.html
+   49  git add .
+   50  git commit -m "third repo oluşturuldu"
+   51  git push 
+   52  git clone https://github.com/erhantezer/git-session-3.git
+   53  cd ..
+   54  git clone  https://github.com/erhantezer/git-session-3.git
+   55  nano index.js
+   56  cd git-session-3
+   57  nano index.js
+   58  nano test.py
+   59  git add .
+   60  git commit -m "güzelce bitti"
+   61  git push
+   62  nano index.html
+   63  nano README.md
+   64  git add .
+   65  git commit -m "buda bitti"
+   66  git push
+   67  git pull https://github.com/erhantezer/git-session-3.git
+   68  git push
+   69  git clone https://github.com/erhantezer/python.git
+   70  git status
+   71  nano index.html
+   72  git status
+   73  git init
+   74  nano index.html
+   75  y
+   76  git status
+   77  cd desktop
+   78  git init
+   79  git status
+   80  cd ..
+   81  git add index.html
+   82  git status
+   83  git push index.html
+   84  git commit -m "erhan tamam"
+   85  git push index.html
+   86  git clone https://github.com/erhantezer/python.git
+   87  git push index.html
+   88  git push 
+   89  git status
+   90  git log
+   91  git push -u gitrepo master
+   92  cd Desktop
+   93  mkdir erhan
+   94  cd erhan
+   95  git init
+   96  git clone https://github.com/erhantezer/python.git
+   97  nano index.py
+   98  git status
+   99  git add .
+  100  git add .
+  101  git commit -m "erhan tamam"
+  102  git push 
+  103  git push -u gitrepo master
+  104  git status
+  105  git clone https://github.com/erhantezer/python.git
+  106  git push
+  107  git push index.py
+  108  git clone
+  109  git clone https://github.com/erhantezer/tezer.git
+  110  git log
+  111  git push 
+  112  git push index.py
+  113  git init
+  114  git add README.md
+  115  git branch -M master
+  116  git branch
+  117  git remote add origin https://github.com/erhantezer/tezer.git
+  118  git push -u origin master
+  119  git clone https://github.com/erhantezer/erman.git
+  120  git clone https://github.com/erhantezer/git-dersleri.git
+  121  git push index.py
+  122  git push 
+  123  ls -al
+  124  git status
+  125  git add .
+  126  git add .
+  127  git commit -m "tamam"
+  128  git push
+  129  git push -u erhan master
+  130  git pull
+  131  git remote add origin https://github.com/erhantezer/git-dersleri.git
+  132  git remote add erman https://github.com/erhantezer/git-dersleri.git
+  133  git push -u erman master
+  134  git remote 
+  135  git status
+  136  git log
+  137  git push -u erman master
+  138  git  pull
+  139  git push 
+  140  git remote add erman https://github.com/erhantezer/git-dersleri.git
+  141  git push -u erman master
+  142  git add .
+  143  cd Desktop
+  144  git init
+  145  git clone https://github.com/erhantezer/git-dersleri.git
+  146  git status
+  147  git add .
+  148  git commit -m "erhan"
+  149  git add python.pg
+  150  git add index.txt
+  151  git commit -m "erhan"
+  152  git clone https://github.com/erhantezer/git-dersleri.git
+  153  git clone https://github.com/erhantezer/tezgel.git
+  154  git push
+  155  git remote add tezgel https://github.com/erhantezer/tezgel.git
+  156  git push -u tezgel master
+  157  git clone https://github.com/erhantezer/tezgel.git
+  158  cd Desktop
+  159  mkdir erkan
+  160  git init
+  161  git clone https://github.com/erhantezer/erkan.git
+  162  cd erkan
+  163  git clone https://github.com/erhantezer/erkan.git
+  164  nano README.md
+  165  ls
+  166  git statsu
+  167  git init
+  168  git statsu
+  169  git status
+  170  git status
+  171  git add .
+  172  git commit -m "tamamlandı"
+  173  git push
+  174  nano erhan.js
+  175  git add .
+  176  git status
+  177  git commit -m "erhan oluşturdu"
+  178  git push
+  179  cd Desktop
+  180  git clone https://github.com/erhantezer/git-dersleri.git
+  181  git pull
+  182  git clone https://github.com/erhantezer/git-dersleri.git
+  183  git status
+  184  cd git-dersleri
+  185  git status
+  186  ls -al
+  187  git status
+  188  git add .
+  189  git commit -m "1mart düzenlendi"
+  190  git push
+  191  cd Desktop
+  192  git clone https://github.com/erhantezer/erkan.git
+  193  cd erkan
+  194  git branch yandal 
+  195  git branch
+  196  git checkout yandal1
+  197  git checkout yandal
+  198  git status
+  199  touch {1..5}.html
+  200  ls -a
+  201  git status
+  202  git add .
+  203  git status
+  204  git commit -m " 1 den 5 e kadar html dosyaları oluşturuldıu"
+  205  git status
+  206  git online
+  207  git checkout master
+  208  git merge yandal
+  209  git push
+  210  git branch
+  211  git checkout yandal
+  212  git push
+  213   git push --set-upstream origin yandal
+  214  git checkout master
+  215  git push
+  216  git status
+  217  git pull
+  218  git branch yandal1 yandal2
+  219  git branch yandal1 yandal3
+  220  cd Desktop
+  221  git clone https://github.com/habipbingol/habipbingol.github.io.git
+  222  git checkout -b erhan
+  223  git branch
+  224  git branch -d erhan
+  225  git checkout master
+  226  git branch master
+  227  git checkout master
+  228  git checkout master
+  229  ls -al
+  230  git checkout master
+  231  pwd
+  232  rm -rf habipbingol.github.io/
+  233  git checkout master
+  234  git branch -D erhan
+  235  pwd
+  236  git branch
+  237  git checkout master
+  238  git status
+  239  git add .
+  240  git commit -m "tamam"
+  241  cd ~
+  242  cd ..
+  243  cd ..
+  244  cd ..
+  245  cd ..
+  246  cd Desktop
+  247  ls -al
+  248  cd user
+  249  cd usr
+  250  ls -al
+  251  git checkout -D erhan
+  252  cd Desktop
+  253  git branch
+  254  git checkout master
+  255  git log
+  256  git branch -D erhan
+  257  git checkout master
+  258  cd ..
+  259  git status
+  260  ls -al
+  261  rm -rf .git
+  262  cd Desktop
+  263  git clone https://github.com/habipbingol/habipbingol.github.io.git
+  264  cd habipbingol.github.io/
+  265  git branch erhan
+  266  ls -al
+  267  nano index.html
+  268  git add .
+  269  git status
+  270  git commit -m "şehir ve mail değiştirildi"
+  271  git push -u origin erhan
+  272  pwd
+  273  git branch
+  274  git checkout -b erhan
+  275  git checkout erhan
+  276  git push
+  277  git push -u origin erhan
+  278  nano index.html
+  279  git status
+  280  git add .
+  281  git commit -m "mail ve doğum tarihi"
+  282  git push -u origin erhan
+  283  git clone https://github.com/brs14shn/brs14shn.github.io.git
+  284  rm -rf brs14shn.github.io/
+  285  cd Desktop
+  286  git clone https://github.com/brs14shn/brs14shn.github.io.git
+  287  cd brs14shn.github.io/
+  288  git checkout -b erhan
+  289  nano index.html
+  290  nano index.html
+  291  nano index.html
+  292  git status
+  293  git add .
+  294  git commit -m "title is changed"
+  295  git push -u origin erhan
+  296  git --online
+  297  git checkout --online
+  298  git --helpğ
+  299  git --help
+  300  git pull
+  301  git checkout master
+  302  git branch -d erhan
+  303  git branch
+  304  code .
+  305  cd Desktop
+  306  git clone https://github.com/abdurrahmankucuk90/abdurrahmankucuk90.github.io.git
+  307  git branch 
+  308  cd abdurrahmankucuk90.github.io/
+  309  git checkout -b erhan
+  310  nano index.html
+  311  git add .
+  312  git commit -m "isim değiştirildi"
+  313  git push -u origin erhan
+  314  git checkout master
+  315  cd ..
+  316  git clone https://github.com/Fthhbsr/fthhbsr.github.io.git
+  317  cd fthhbsr.github.io/
+  318  git checkout -b tezer
+  319  nano index.html
+  320  git add .
+  321  git commit -m "başlık değiştirildi"
+  322  git push -u origin tezer
+  323  git clone https://github.com/habipbingol/habipbingol.github.io.git
+  324  rm -rf habipbingol.github.io/
+  325  ls -al
+  326  cd Desktop
+  327  git clone https://github.com/habipbingol/habipbingol.github.io.git
+  328  cd habipbingol.github.io/
+  329  git checkout -b erhan
+  330  ls -al
+  331  nano index.html
+  332  git add .
+  333  git status
+  334  git commit -m "index.html was modified"
+  335  git push -u origin erhan
+  336  git diff
+  337  git diff -all
+  338  git log
+  339  cd Desktop
+  340  git clone https://github.com/erhantezer/python-app.git
+  341  git branch
+  342  cd python-app
+  343  git branch
+  344  git checkout -b new-feature 
+  345  git status
+  346  nano leap-year.py
+  347  git status
+  348  git add .
+  349  git status
+  350  git commit -m "added new line"
+  351  git status
+  352  git remote add upstream https://github.com/erhantezer/python-app.git
+  353  git remote -v
+  354  git pull upsteam main
+  355  git status
+  356  git ush origin
+  357  git push
+  358  git push --set-upstream origin new-feature
+  359  git push - u origin
+  360  git push - uorigin
+  361  git push -u origin
+  362  git push -u origin main
+  363  git push -u upstream main
+  364  git push -u origin new-feature
+  365  nano leap-year.py
+  366  git status
+  367  git log
+  368  cd Desktop
+  369  git clone https://github.com/erhantezer/python-app.git
+  370  cd python-app
+  371  git checkout - b new-feature
+  372  git checkout -b new-feature
+  373  git status
+  374  nano leap-year.py
+  375  git status
+  376  git add leap-year.py
+  377  git commit -m "added new line"
+  378  git push -u origin new-feature 
+  379  git pull
+  380  git remote add upstream https://github.com/erhantezer/python-app.git
+  381  git remote -v
+  382  git pull upstream main
+  383  git push -u origin new-feature
+  384  git push --set-upstream origin new-feature
+  385  git push -u origin new-feature
+  386  git pull
+  387  git pull
+  388  git push -u origin new-feature
+  389  cd Desktop/
+  390  git clone https://github.com/erhantezer/Python-Notlar.git
+  391  git status
+  392  git pull
+  393  cd Python-Notlar/
+  394  git status
+  395  git add .
+  396  git status
+  397  git commit -m "notlarım eklendi"
+  398  git status
+  399  git push -u origin master
+  400  cd Desktop
+  401  git status
+  402  git log
+  403  mkdir erhantezer
+  404  cd erhantezer/
+  405  git init
+  406  git checkout -b branch1
+  407  touch erhan.html
+  408  nano erhan.html 
+  409  git checkout master
+  410  git push master
+  411  git merge master
+  412  git checkout master
+  413  git status
+  414  git add .
+  415  git commit -m "dosya oluşturuldu"
+  416  git checkout master
+  417  git status
+  418  git log
+  419  git merge master
+  420  git branch -d branch1
+  421  git checkout master
+  422  cd desktop
+  423  cd ..
+  424  cd Desktop
+  425  git clone https://github.com/erhantezer/Python-Notlar.git
+  426  git pull
+  427  cd Desktop
+  428  git clone https://github.com/clarusway/clarusway-full-stack-11-22.git
+  429  cd Desktop
+  430  git clone https://github.com/sadikturan/komple-web-gelistirme-dersleri.git
+  431  cd Desktop/HTML-CSS
+  432  rm -rf Projects/
+  433  rm -rf Projects/
+  434  cd Desktop/Voltran
+  435  git init
+  436  git add
+  437  git add .
+  438  git commit -m "voltran projesi eklendi"
+  439  git push -u https://github.com/erhantezer/Voltran.git
+  440  git pull https://github.com/erhantezer/Voltran.git
+  441  git remote add origin https://github.com/erhantezer/Voltran.git
+  442  git push -u origin master
+  443  git config --global user.name "Erhan"
+  444  git config --global user.email "erhantezer68@gmail.com"
+  445  git remote add origin https://github.com/erhantezer/Voltran.git
+  446  git push -u origin master
+  447  git pull
+  448  git push
+  449  git push --set-upstream origin master
+  450  cd Desktop
+  451  git clone https://github.com/sadikturan/komple-web-gelistirme-dersleri.git
+  452  node --version
+  453  npm install -g sass
+  454  sass --version
+  455  cd Desktop
+  456  git clone https://github.com/zeyasar/clock.git
+  457  nodejs --version
+  458  node js --version
+  459  cd ./
+  460  ls
+  461  nodejs --version
+  462  cd ..
+  463  nodejs --version
+  464  cd ..
+  465  nodejs --version
+  466  cd Desktop
+  467  nodejs --version
+  468  node --version
+  469  npm install -g sass
+  470  sudo apt-get install ruby-dev
+  471  sudo dnf install ruby-devel
+  472  node --version
+  473  git clone https://github.com/gideo/CodeWars.git
+  474  ls
+  475  cd Desktop
+  476  git clone https://github.com/gideo/CodeWars.git
+  477  cd Desktop
+  478  git clone https://github.com/thealiyasar/JavaScript-for-Everyone.git
+  479  git clone 
+  480  git clone https://github.com/thealiyasar/30-Days-Of-JavaScript.git
+  481  cd Desktop
+  482  git clone https://github.com/clarusway/clarusway-full-stack-11-22.git
+  483  cd Desktop
+  484  mkdir yeni
+  485  cd yeni
+  486  node --version
+  487  npm i -g
+  488  npm start
+  489  node -v
+  490  npm -v
+  491  npm i -g yarn
+  492  yarn -v
+  493  cd Desktop
+  494  cd Desktop
+  495  npx create-react-app my-app
+  496  cd my-app
+  497  npm start
+  498  node -v
+  499  npm -v
+  500  yarn -v
+  501  python --version
+  502  pip
+  503  pip --version
+  504  python -h
+  505  python -m venv env
+  506  source env/Scripts/Activate
+  507  pip freeze
+  508  pip install django
+  509  python -m pip install --upgrade pip
+  510  pip freeze
+  511  pip freeze >> erhan.txt
+  512  django -admin
+  513  django-admin
+  514  django-admin startproject main .
+  515  python manage.py runserver
+  516  history
+  517  history >> history.txt

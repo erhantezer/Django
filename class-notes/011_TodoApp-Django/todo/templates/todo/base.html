@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'todo/css/style.css' %}">
+    <title>TodoApp</title>
+</head>
+<body>
+    <!-- navabar start -->
+    <nav class="navbar navbar-expand-lg navbar navbar-white ">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="/">
+            <img src="{% static 'todo/images/cw_logo.png' %}" alt="Hi!" width="45" height="45">
+            Clarusway Todo App</a>
+        </div>
+    </nav>
+
+
+    {% if messages %} 
+    {% for message in messages %} 
+        {% if message.tags == "warning" %}
+            <div id="warning" class="message">{{ message }}</div>
+        {% else %}
+            <div id="success" class="message">{{ message }}</div>
+        {% endif %} 
+    {% endfor %} 
+   {% endif %}
+
+    {% block content %}
+
+
+    {% endblock content %}
+</body>
+</html>

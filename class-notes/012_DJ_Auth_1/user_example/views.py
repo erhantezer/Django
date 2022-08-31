@@ -32,8 +32,7 @@ def register(request):
 
 def password_change(request):
     if request.method == 'POST':
-        # We will use user change form this time
-        # Import it
+        
         form = UserChangeForm(request.POST)
         if form.is_valid():
             form.save()

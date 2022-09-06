@@ -24,6 +24,7 @@
     {% include "users/navbar.html" %}
     
     <div style="margin-top: 100px; margin-bottom: 100px" class="container">
+
         {% if messages %}
 
         {% for message in messages %}
@@ -31,8 +32,10 @@
         <div class="alert alert-danger">{{ message }}</div>
 
         {% else %}
+
         <div class="alert alert-{{ message.tags }}">{{ message }}</div>
         {% endif %}
+        
         {% endfor %}
         {% endif %}
         {% block content %}

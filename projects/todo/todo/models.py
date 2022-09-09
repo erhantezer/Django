@@ -9,6 +9,7 @@ priority_choices = [
 ]
 
 class Todo(models.Model):
+    
     title = models.CharField(max_length=70)
     description = models.TextField()
     is_done = models.BooleanField(default=False)

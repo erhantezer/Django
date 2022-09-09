@@ -4,6 +4,7 @@ from django.views.generic import ListView
 from .models import Todo
 
 urlpatterns = [
+    
     # path("", home, name="home"),
     path('',TodoCreateList.as_view(),name="home"),
     path("add/", todo_create, name="add"),
@@ -15,4 +16,5 @@ urlpatterns = [
     # path("delete/<int:id>", todo_delete, name="delete"),
     path('deletes/<int:pk>', TodoDelete.as_view(),name="delete"),
     path('done/<int:id>',is_completed,name="done"),
+    
 ]

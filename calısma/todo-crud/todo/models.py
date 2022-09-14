@@ -2,15 +2,15 @@ from django.db import models
 
 # Create your models here.
 status_choices = [
-    ("completed"),
-    ("pending"),
-    ("In-Progress")
+    ("c","completed"),
+    ("p","pending"),
+    ("I", "In-Progress")
 ]
 
 priority_choices = [
-   ("1️⃣"),
-   ("2️⃣"),
-   ("3️⃣")
+   ("1","1️⃣"),
+   ("2","2️⃣"),
+   ("3","3️⃣")
 ]
 
 class Todo(models.Model):

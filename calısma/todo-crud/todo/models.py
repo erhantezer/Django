@@ -2,8 +2,8 @@ from django.db import models
 
 # Create your models here.
 status_choices = [
-    ("c","completed"),
-    ("p","pending"),
+    ("c","Completed"),
+    ("p","Pending"),
     ("I", "In-Progress")
 ]
 

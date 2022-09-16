@@ -10,3 +10,7 @@
 ## 9- .gitignore dosyasu ana klasör içinde oluşturulur
 ## 10- django-admin startproject main . ile proje oluştur
 ## 11- python manage.py startapp todo ile app oluştur
+
+
+
+### 1- pip install -r requirements.txt

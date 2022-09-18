@@ -1,9 +1,12 @@
 {% extends 'todo/base.html' %}
 {% block content %}
-{% comment %} <h1>ADD TODO</h1> {% endcomment %}
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="ADD">
-</form>
+<div class="text-center">
+    <h1 class="text-warning text-center fst-italic">ADD TODO</h1>
+    <form action="" method="POST" class="text-center mt-5 fst-italic fw-bold">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="ADD" class="mt-5 mb-4 btn btn-success text-center fw-bold">
+    </form>
+</div>
+
 {% endblock content %}

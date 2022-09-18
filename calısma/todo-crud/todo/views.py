@@ -4,7 +4,7 @@ from .forms import TodoForm
 from todo.models import Todo
 from django.shortcuts import render,redirect
 
-# Create your views here.
+## DATA daki verileri ekranda görmemizi sağladı
 def home(request):
     todos = Todo.objects.all()
     form = TodoForm()
@@ -15,6 +15,7 @@ def home(request):
     }
     return render(request, "todo/home.html", context)
 
+## EKLEME işlemi yaptık
 def add(request):
     form = TodoForm(request.POST or None)
     if form.is_valid():
@@ -25,7 +26,8 @@ def add(request):
         "form":form
     }
     return render(request, "todo/todo_add.html", context)
-    
+
+ ## GÜNCELLEME işlemi yaptık   
 def update(request, id):
     todo = Todo.objects.get(id=id)
     form = TodoForm(instance=todo)
@@ -41,3 +43,17 @@ def update(request, id):
         "form":form,
     }
     return render(request, "todo/todo_update.html", context)
+
+def delete(request, id):
+    todo = Todo.objects.get(id=id)
+    
+    if request.method == "POST":
+        todo.delete()
+        messages.warning(request, "Todo deleted!")
+        return redirect("home")
+    
+    context = {
+        "todo":todo
+    }
+
+    return render(request, "todo/todo_delete.html", context)

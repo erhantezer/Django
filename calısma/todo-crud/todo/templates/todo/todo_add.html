@@ -1,5 +1,6 @@
 {% extends 'todo/base.html' %}
 {% block content %}
+{% comment %} <h1>ADD TODO</h1> {% endcomment %}
 <form action="" method="POST">
     {% csrf_token %}
     {{form.as_p}}

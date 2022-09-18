@@ -6,7 +6,8 @@
     </div>
     <div class="p-4 d-flex align-items-center ">
         <form action="" method="POST">
-            {% csrf_token%} {{form.as_p}}
+            {% csrf_token%}
+             {{form.as_p}}
             <hr>
             <input type="submit" value="UPDATE" class="btn btn-success">
         </form>

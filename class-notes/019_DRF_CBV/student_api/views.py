@@ -11,12 +11,35 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
-from rest_framework.generics import GenericAPIView,mixins,ListCreateAPIView
+from rest_framework.generics import GenericAPIView,mixins,ListCreateAPIView,RetrieveUpdateDestroyAPIView
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.decorators import action
+
 # Create your views here.
 
 ##! CBV ##! Concrate APIView
 class StudentLC(ListCreateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializer
     
+class StudentRUD(RetrieveUpdateDestroyAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializer
+    
+    
+    
+    
+##! CBV ##! ViewSet
+class StudentGRUD(ModelViewSet):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializer
+
+    @action(detail=False,methods=['GET'])
+    def student_count(self,request):
+        count={
+            'student-count':self.queryset.count()
+        }
+        return Response(count)
 
 
 
@@ -46,6 +69,9 @@ class StudentURD(mixins.UpdateModelMixin,
 
     def delete(self,request,*args,**kwargs):
         return self.destroy(request,*args,**kwargs)
+
+
+
 
 
 
@@ -96,6 +122,10 @@ class StudentDetail(APIView):
               "message":f"student {student.last_name} deleted successfully"
           }
           return Response(data,status=status.HTTP_204_NO_CONTENT)
+     
+     
+     
+     
           
 
 ###! FBV ###

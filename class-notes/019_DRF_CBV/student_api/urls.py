@@ -1,4 +1,8 @@
-from django.urls import path
+ 
+from django.urls import path,include
+from rest_framework import routers
+
+
 from .views import ( 
     ##! FBV URLS
     # student_api,
@@ -10,22 +14,29 @@ from .views import (
     # student_update_partial,
     # student_delete
     
-    StudentDetail,
-    StudentURD,
+    # StudentDetail,
+    StudentGRUD,
+    # StudentLC,
+    # StudentRUD,
+    # StudentURD,
     # StudentList,
     home,
-    StudentListCreate,
+    # StudentListCreate,
     )
 
 
-
+router = routers.DefaultRouter()
+router.register('student', StudentGRUD)
 
 urlpatterns = [
     path('', home),
     # path("student/", StudentList.as_view()), #? APIView
     # path("student/<int:pk>",StudentDetail.as_view()), #? APIView
-    path("student/",StudentListCreate.as_view()), #? Generic APIView
-    path("student/<int:pk>",StudentURD.as_view()), #? Generic APIView
+    # path("student/",StudentListCreate.as_view()), #? Generic APIView
+    # path("student/<int:pk>",StudentURD.as_view()), #? Generic APIView
+    # path("student/",StudentLC.as_view()), #? Concrate APIView
+    # path("student/<int:pk>",StudentRUD.as_view()), #? Concrate APIView
+    path("",include(router.urls)), #? ViewSet
     
 ]
 ##! FBV URLS

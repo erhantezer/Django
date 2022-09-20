@@ -11,54 +11,68 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
+from rest_framework.generics import GenericAPIView,mixins
 # Create your views here.
+
+##! GENERIC APIView
+
+class StudentListCreate(mixins.ListModelMixin,mixins.CreateModelMixin,GenericAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializer
+    def get(self,request,*args,**kwargs):
+        return self.list(request,*args,**kwargs)
+    
+    def get(self,request,*args,**kwargs):
+        return self.create(request,*args,**kwargs)
+
+
 ##! CBV
 def home(request):
     return HttpResponse('<h1>API Page</h1>')
 
-class StudentList(APIView):
+# class StudentList(APIView):
     
-    def get(self, request):
-        #? request.method==get
-        students = Student.objects.all()
-        #? birden fazla olduğu için
-        serializer=StudentSerializer(students, many=True)
-        return Response(serializer.data)
+#     def get(self, request):
+#         #? request.method==get
+#         students = Student.objects.all()
+#         #? birden fazla olduğu için
+#         serializer=StudentSerializer(students, many=True)
+#         return Response(serializer.data)
     
-    def post(self,request):
-        serializer=StudentSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#     def post(self,request):
+#         serializer=StudentSerializer(data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer.data, status=status.HTTP_200_OK)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-class StudentDetail(APIView):
+# class StudentDetail(APIView):
     
-    def get_obj(self,pk):
-        return get_object_or_404(Student,pk=pk)
+#     def get_obj(self,pk):
+#         return get_object_or_404(Student,pk=pk)
     
-    def get(self, request, pk):
-        student=self.get_obj(pk)
-        serializer=StudentSerializer(student)  
-        return Response(serializer.data)
+#     def get(self, request, pk):
+#         student=self.get_obj(pk)
+#         serializer=StudentSerializer(student)  
+#         return Response(serializer.data)
     
-    def put(self,request,pk):
-          student=self.get_obj(pk)
-          serializer=StudentSerializer(student, data=request.data)
-          if serializer.is_valid():
-              serializer.save()
-              new_data=serializer.data
-              new_data["success"]=f"student {student.last_name} updated successfully"
-              return Response(new_data)
-          return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+#     def put(self,request,pk):
+#           student=self.get_obj(pk)
+#           serializer=StudentSerializer(student, data=request.data)
+#           if serializer.is_valid():
+#               serializer.save()
+#               new_data=serializer.data
+#               new_data["success"]=f"student {student.last_name} updated successfully"
+#               return Response(new_data)
+#           return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
       
-    def delete(self,request,pk):
-          student = self.get_obj(pk)
-          student.delete()
-          data={
-              "message":f"student {student.last_name} deleted successfully"
-          }
-          return Response(data,status=status.HTTP_204_NO_CONTENT)
+#     def delete(self,request,pk):
+#           student = self.get_obj(pk)
+#           student.delete()
+#           data={
+#               "message":f"student {student.last_name} deleted successfully"
+#           }
+#           return Response(data,status=status.HTTP_204_NO_CONTENT)
           
 
 ###! FBV ###

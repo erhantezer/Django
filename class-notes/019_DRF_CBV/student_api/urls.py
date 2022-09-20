@@ -1,14 +1,6 @@
 from django.urls import path
-from .views import (
-    StudentDetail,
-    StudentList,
-    home,
-    
-    
-    )
-
-##! FBV URLS
-"""
+from .views import ( 
+    ##! FBV URLS
     # student_api,
     # student_api_get_update_delete, path_api,
     # student_list,
@@ -17,12 +9,24 @@ from .views import (
     # student_update,
     # student_update_partial,
     # student_delete
-"""
+    
+    # StudentDetail,
+    # StudentList,
+    home,
+    StudentListCreate,
+    
+    
+    
+    )
+
+
+
 
 urlpatterns = [
     path('', home),
-    path("student/", StudentList.as_view()),
-    path("student/<int:pk>",StudentDetail.as_view()),
+    # path("student/", StudentList.as_view()), #? APIView
+    # path("student/<int:pk>",StudentDetail.as_view()), #? APIView
+    path("student/",StudentListCreate.as_view()), #? Generic APIView
     
 ]
 ##! FBV URLS

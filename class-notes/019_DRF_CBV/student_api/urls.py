@@ -10,7 +10,7 @@ from .views import (
     # student_update_partial,
     # student_delete
     
-    # StudentDetail,
+    StudentDetail,
     # StudentList,
     home,
     StudentListCreate,
@@ -25,7 +25,7 @@ from .views import (
 urlpatterns = [
     path('', home),
     # path("student/", StudentList.as_view()), #? APIView
-    # path("student/<int:pk>",StudentDetail.as_view()), #? APIView
+    path("student/<int:pk>",StudentDetail.as_view()), #? APIView
     path("student/",StudentListCreate.as_view()), #? Generic APIView
     
 ]

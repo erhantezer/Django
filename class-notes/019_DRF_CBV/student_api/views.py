@@ -11,10 +11,16 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.views import APIView
-from rest_framework.generics import GenericAPIView,mixins
+from rest_framework.generics import GenericAPIView,mixins,ListCreateAPIView
 # Create your views here.
 
-##! GENERIC APIView
+##! CBV ##! Concrate APIView
+class StudentLC(ListCreateAPIView):
+    
+
+
+
+##! CBV ##! GENERIC APIView
 
 class StudentListCreate(mixins.ListModelMixin,mixins.CreateModelMixin,GenericAPIView):
     queryset=Student.objects.all()

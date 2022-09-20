@@ -11,12 +11,10 @@ from .views import (
     # student_delete
     
     StudentDetail,
+    StudentURD,
     # StudentList,
     home,
     StudentListCreate,
-    
-    
-    
     )
 
 
@@ -25,8 +23,9 @@ from .views import (
 urlpatterns = [
     path('', home),
     # path("student/", StudentList.as_view()), #? APIView
-    path("student/<int:pk>",StudentDetail.as_view()), #? APIView
+    # path("student/<int:pk>",StudentDetail.as_view()), #? APIView
     path("student/",StudentListCreate.as_view()), #? Generic APIView
+    path("student/<int:pk>",StudentURD.as_view()), #? Generic APIView
     
 ]
 ##! FBV URLS

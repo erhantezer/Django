@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import (
+    StudentDetail,
     StudentList,
     home,
     
@@ -21,6 +22,7 @@ from .views import (
 urlpatterns = [
     path('', home),
     path("student/", StudentList.as_view()),
+    path("student/<int:pk>",StudentDetail.as_view()),
     
 ]
 ##! FBV URLS

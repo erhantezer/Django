@@ -7,6 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is the home page</h1>
+    
+    {% if user.is_authenticated %} 
+        <h1>
+            Hello {{user.username | title}}    
+        </h1>
+        
+        
+        <a href="{% url 'logout' %}">Logout</a>
+        
+            
+        
+    {% else %}
+        <h1>Hello, please login to see the page.</h1>
+        
+        
+        <a href="{% url 'login' %}">Login</a> 
+        
+            
+        
+    {% endif %}
 </body>
 </html>

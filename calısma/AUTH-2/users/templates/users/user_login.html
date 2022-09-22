@@ -1,57 +1,13 @@
-{% load static %} {% load static %}
+{% extends 'users/base.html' %} {% block content %} {% load crispy_forms_tags %}
 
-<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-  <button
-    class="navbar-toggler navbar-toggler-right"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarCollapse"
-    aria-controls="navbarCollapse"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <a class="navbar-brand" href="{% url 'home'  %}"
-    ><img src="{% static 'users/images/cw_logo.jpg' %}" alt="CLARUSWAY_LOGO" />
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h3>Please Login</h3>
 
-    Clarusway FS</a
-  >
-
-  <div class="collapse navbar-collapse" id="navbarCollapse">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        {% comment %} {% url 'students' %} {% endcomment %}
-        <a class="nav-link" href="">Students</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="">Contact</a>
-      </li>
-    </ul>
-
-    <ul class="navbar-nav ml-auto">
-      {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
-
-      <li class="nav-item active">
-        <a class="nav-link" href="/admin">Admin</a>
-      </li>
-      {% endif %}
-
-      <li class="nav-item active">
-        {% comment %} {% url 'logout' %} {% endcomment %}
-        <a class="nav-link" href="">Log Out</a>
-      </li>
-      {% else %}
-
-      <li class="nav-item active">
-        {% comment %} {% url 'user_login' %} {% endcomment %}
-        <a class="nav-link" href="">Log In</a>
-      </li>
-      {% endif %}
-      <li class="nav-item active">
-        {% comment %} {% url 'register' %} {% endcomment %}
-        <a class="nav-link" href="">Register</a>
-      </li>
-    </ul>
+    <form action="{% url 'user_login' %}" method="post">
+      {% csrf_token %} {{form|crispy}}
+      <button type="submit" class="btn btn-danger">Login</button>
+    </form>
   </div>
-</nav>
+</div>
+{% endblock content %}

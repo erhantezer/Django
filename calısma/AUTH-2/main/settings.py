@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+import os
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -38,7 +39,17 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    #? 3rd party apps,
+    'crispy_forms',
+    #? my apps
+    'users',
 ]
+##! for pillow (model)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

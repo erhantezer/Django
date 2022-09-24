@@ -1,6 +1,7 @@
 
 from django.db import models
 from django.contrib.auth.models import User
+from .models import Post
 
 # Create your models here.
 def user_directory_path(instance, filename):
@@ -36,3 +37,23 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
+    
+    
+    class Comment(models.Moddel):
+        user = models.ForeignKey(User, on_delete=models.CASCADE)
+        post = models.ForeignKey(Post, on_delete=models.CASCADE)
+        time_stamp = models.DateTimeField(auto_now_add=True)
+        content = models.TextField()
+        
+        def __str__(self):
+            return self.user.username
+        
+    class Like(models.Model):
+        user = models.ForeignKey(User, on_delete=models.CASCADE)
+        post = models.ForeignKey(Post, on_delete=models.CASCADE)
+        
+        def __str__(self):
+            return self.user.username
+        
+    class PostView(models.Model):
+        pass

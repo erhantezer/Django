@@ -1,8 +1,10 @@
-# from django.urls import path
+from django.urls import path
 
-# urlpatterns = [
-#     path()
-# ]
+from blog.views import post_list
+
+urlpatterns = [
+    path("", post_list, name="list"),
+]
 
 
 

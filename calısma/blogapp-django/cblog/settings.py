@@ -119,7 +119,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "7static/"
+STATIC_URL = "/static/"
 
 ##? modelde image için media lar eklendi
 MEDIA_URL = "/media/"

@@ -39,26 +39,26 @@ class Post(models.Model):
         return self.title
     
     
-    class Comment(models.Moddel):
-        user = models.ForeignKey(User, on_delete=models.CASCADE)
-        post = models.ForeignKey(Post, on_delete=models.CASCADE)
-        time_stamp = models.DateTimeField(auto_now_add=True)
-        content = models.TextField()
+class Comment(models.Moddel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    time_stamp = models.DateTimeField(auto_now_add=True)
+    content = models.TextField()
         
-        def __str__(self):
-            return self.user.username
+    def __str__(self):
+        return self.user.username    
         
-    class Like(models.Model):
-        user = models.ForeignKey(User, on_delete=models.CASCADE)
-        post = models.ForeignKey(Post, on_delete=models.CASCADE)
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
         
-        def __str__(self):
-            return self.user.username
+    def __str__(self):
+        return self.user.username
         
-    class PostView(models.Model):
-        user = models.ForeignKey(User, on_delete=models.CASCADE)
-        post = models.ForeignKey(Post, on_delete=models.CASCADE)
-        time_stamp = models.DateTimeField(auto_now_add=True)
+class PostView(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    time_stamp = models.DateTimeField(auto_now_add=True)
         
-        def __str__(self):
-            return self.user.username
+    def __str__(self):
+        return self.user.username

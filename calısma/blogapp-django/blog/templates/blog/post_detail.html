@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url "blog:detail" object.slug %}"><h1>{{object.title }}</h1></a>
+    <img src="{{object.image.url}}" alt="">
+    <p>{{object.content}}</p>
+{% endblock content %}

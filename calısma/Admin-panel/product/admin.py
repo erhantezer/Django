@@ -49,11 +49,11 @@ class ProductAdmin(admin.ModelAdmin):
             
     is_in_stock.short_description = 'İşaretlenen ürünleri stoğa ekle'
     
-    
 	
     def added_days_ago(self, product):
         fark = timezone.now() - product.create_date
         return fark.days
+    
     
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ("__str__", "created_date","is_released")

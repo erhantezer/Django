@@ -1,9 +1,10 @@
 from django.contrib import admin
-from .models import Product
+from .models import Product, Review
 from django.utils import timezone 
 
 # Register your models here.
 admin.site.register(Product)
+admin.site.register(Review)
 
 
 

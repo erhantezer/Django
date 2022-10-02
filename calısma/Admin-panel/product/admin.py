@@ -61,6 +61,9 @@ class ReviewAdmin(admin.ModelAdmin):
     raw_id_fields = ("product",)
     
     
+    
+    
+    
 admin.site.register(Product,ProductAdmin)
 admin.site.register(Review,ReviewAdmin)
 

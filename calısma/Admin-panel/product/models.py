@@ -4,6 +4,8 @@ from ckeditor.fields import RichTextField
 
 #! DATABASE e verilerin kayıt edilmesi ve burada istenilen verilerin oluşturulması için yapılır sadece kayıt bölümü görülür get post  update işlemleri için views yazılır delete için otomatik admin de oluşturuluyor ama view de biz oluşturmalıyız template yani reactte bu verilerin görünmesi gerekir end pointler için
 
+class Category(models.Model):
+    name =models.CharField(max_length=100, verbose_name="category name")
 
 class Product(models.Model):
     name = models.CharField(max_length=100)

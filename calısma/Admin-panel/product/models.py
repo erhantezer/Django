@@ -1,25 +1,32 @@
-
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.utils.safestring import mark_safe
 
-#! DATABASE e verilerin kayıt edilmesi ve burada istenilen verilerin oluşturulması için yapılır sadece kayıt bölümü görülür get post  update işlemleri için views yazılır delete için otomatik admin de oluşturuluyor ama view de biz oluşturmalıyız template yani reactte bu verilerin görünmesi gerekir end pointler için
 
+# Create your models here.
 class Category(models.Model):
-    name =models.CharField(max_length=100, verbose_name="category name")
-
+    name = models.CharField(max_length=100, verbose_name="category name")
+    is_active = models.BooleanField(default=True)
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+        
+    def __str__(self):
+        return self.name
 class Product(models.Model):
     name = models.CharField(max_length=100)
     # description = models.TextField(blank=True, null=True)
-    description = RichTextField() #? word belgesi oluşturur
+    description = RichTextField()
     create_date = models.DateTimeField(auto_now_add=True)
     update_date = models.DateTimeField(auto_now=True)
     is_in_stock = models.BooleanField(default=True)
-    slug = models.SlugField(blank=True, null=True)  #? otomatik - tire çeker endpointte de görülebilir
-
+    slug = models.SlugField(null=True, blank=True)
+    categories = models.ManyToManyField(Category, related_name="products")
+    product_img = models.ImageField(null=True, blank=True, default="defaults/clarusway.png", upload_to="product/")
     class Meta:
-        verbose_name = "Producttt" #? db içinde iken içine girersek Add Producttt yazacaktır Change Producttt
-        verbose_name_plural = "Productttsss" #? çoğul olarak istersek databese te bu isimle görürüz db adı böyle olur hemen pProduct class altına bak django adminde
-        
+        verbose_name = "Product"
+        verbose_name_plural = "Products"
+    
     def __str__(self):
         return self.name
     
@@ -27,22 +34,22 @@ class Product(models.Model):
         count = self.reviews.count()
         return count
     
+    # def bring_image(self):
+    #     if self.product_img:
+    #         return mark_safe(f"<img src={self.product_img.url} width=400 height=400></img>")
+    #     return mark_safe(f"<h3>{self.name} has not image </h3>")
 
 class Review(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="reviews")
-    review =models.TextField()
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='reviews')
+    review = models.TextField()
     is_released = models.BooleanField(default=True)
-    created_date = models.DateTimeField(auto_now_add=True)
+    created_date = models.DateField(auto_now_add=True)
     
     class Meta:
-        verbose_name = "Review"
-        verbose_name_plural = "Reviews"
-        
-        def __str__(self):
-            return f"{self.product.name} - {self.review}"
-        
-        
-        
-        
-        
-        
+        verbose_name = 'Review'
+        verbose_name_plural = 'Reviews'
+
+    def __str__(self):
+        return f"{self.product.name} - {self.review}" 
+
+

@@ -1,5 +1,7 @@
 # <center> 🛒 DJANGO-STOCK-MANAGAMENT-API 🛒 </center>
 
+swager toolbar ekle!
+
 ## <center> ************************************** </center>
 
 # <center> 🚀 INITIAL SETUP </center>

@@ -6,10 +6,12 @@ swager toolbar ekle!
 
 # <center> 🚀 INITIAL SETUP </center>
 
+
 ```bash
 # CREATING VIRTUAL ENVIRONMENT
 # windows 👇
 python -m venv env
+
 # linux / Mac OS 👇
 vitualenv env
 
